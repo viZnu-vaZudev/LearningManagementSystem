@@ -1,0 +1,38 @@
+section {
+    display: table;
+  }
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  .create-button{
+    padding: 3px 10px;
+    vertical-align: middle;
+    letter-spacing: .5px;
+    font-weight: 400;
+    height: 28px;
+    border-radius: 4px;
+
+  }
+
+  table{
+    caption-side: bottom;
+    display: table;
+    box-sizing: border-box;
+  }
+
+  .col-width{
+    width: 45%;
+  }
+  .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+  
+  .nodataMessage{
+    width: 1320px;
+    height: auto;
+    align-content: center;
+  }
+  .nodataMessage p{
+    text-align: center;
+  }

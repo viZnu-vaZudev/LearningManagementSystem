@@ -1,0 +1,10 @@
+.header{
+    padding: 10px;
+    border: 1px;
+}
+.heading-text{
+    font-size: 32px;
+  background: -webkit-linear-gradient(#eee, rgb(93, 95, 205));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

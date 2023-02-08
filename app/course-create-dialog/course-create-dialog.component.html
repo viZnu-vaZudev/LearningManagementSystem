@@ -1,0 +1,41 @@
+
+  <div class="dialogmodel">
+    <h1 mat-dialog-title>Add New Course</h1>
+    <br>
+    <div mat-dialog-content>
+        <form class="example-form">
+            <div class="row">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Course Name</mat-label>
+                <input matInput placeholder="Course Name" [(ngModel)]="course.courseName" name="courseName">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Course Durattion</mat-label>
+                <input type="number" matInput placeholder="Course Duration" [(ngModel)]="course.courseDuration" name="courseDuration">
+              </mat-form-field>
+              </div>
+              <div class="row">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Technology</mat-label>
+                <input matInput placeholder="Technology" [(ngModel)]="course.technology" name="technology">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Launch URL</mat-label>
+                <input matInput placeholder="Launch URL" [(ngModel)]="course.launchUrl" name="launchUrl">
+              </mat-form-field>
+            </div>
+            <div class="row">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Course Description</mat-label>
+                        <textarea matInput [(ngModel)]="course.courseDescription" name="courseDescription"></textarea>
+                      </mat-form-field>
+            </div>
+        </form>
+        <div class="example-button-row" mat-dialog-actions [align]="'end'">
+            <button type="button" class="btn btn-primary" (click)="save();">Save</button>
+            <button type="button" class="btn btn-outline-secondary">Cancel</button>
+            <button type="button" class="btn btn-outline-secondary">Clear</button>
+        </div>
+        
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+<div class="search">
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-icon >search</mat-icon>
+          </mat-expansion-panel-header>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Course Name</mat-label>
+            <input matInput placeholder="CourseName" [(ngModel)]="courseName">
+          </mat-form-field>&nbsp;
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Technology</mat-label>
+            <input matInput placeholder="Technology" [(ngModel)]="technology">
+          </mat-form-field>&nbsp;
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Duration From</mat-label>
+            <input matInput placeholder="From" [(ngModel)]="courseDurationFrom">
+          </mat-form-field>&nbsp;
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Duration To</mat-label>
+            <input matInput placeholder="To" [(ngModel)]="courseDurationTo">
+          </mat-form-field>&nbsp;
+          <button mat-fab color="accent" aria-label="Example icon button with a heart icon">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-expansion-panel>
+      </mat-accordion>
+  </div>

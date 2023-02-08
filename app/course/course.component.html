@@ -1,0 +1,74 @@
+
+<searchComponent></searchComponent>
+<br>
+<div class="Conatiner">
+    <div class="example-button-row">
+      <button mat-raised-button  color="primary" class="create-button" data-mdb-toggle="modal" data-mdb-target="#exampleModal" (click)="openAddEditEmpForm();">Add New
+        <mat-icon>add_circle_outline</mat-icon>
+      </button>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<div *ngIf="this.courses && this.courses.length > 0">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">sl no</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Course Duration</th>
+          <th scope="col">Technology</th>
+          <th scope="col">Description</th>
+          <th scope="col">Launch Url</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of this.courses; let i = index">
+          <td scope="row">{{i+1}}</td>
+          <td>{{item.courseName}}</td>
+          <td>{{item.courseDuration}}</td>
+          <td>{{item.technology}}</td>
+          <td class="col-width">{{item.courseDescription}}</td>
+          <td><a href={{item.launchUrl}}>{{item.launchUrl}}</a></td>
+          <td><button mat-icon-button color="yellow" aria-label="Example icon button with a menu icon" (click)="editcourse();">
+            <mat-icon>edit</mat-icon>
+          </button></td>
+          <td><button mat-icon-button color="warn" aria-label="Example icon button with a menu icon" (click)="deleteCourse();"><mat-icon>delete</mat-icon> </button></td>
+        </tr>
+      </tbody>
+  </table>
+  <mat-paginator #paginator
+               class="demo-paginator"
+               (page)="handlePageEvent($event)"
+               [length]="length"
+               [pageSize]="pageSize"
+               [disabled]="disabled"
+               [showFirstLastButtons]="showFirstLastButtons"
+               [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+               [hidePageSize]="hidePageSize"
+               [pageIndex]="pageIndex"
+               aria-label="Select page">
+</mat-paginator>
+</div>
+<div class="nodataMessage">
+  <p *ngIf="!this.courses || this.courses.length <= 0">No Data Found</p>
+</div>
+</div>

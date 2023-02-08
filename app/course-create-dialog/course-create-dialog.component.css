@@ -1,0 +1,8 @@
+.action{
+  padding: 0px 25px 20px;
+  flex: 1;
+  
+}
+.action button{
+  flex: 1;
+}
